@@ -1,0 +1,55 @@
+{
+    "title": "An author schema",
+    "description": "An author information",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 30
+        },
+        "slug": {
+            "type": "string",
+            "maxLength": 255
+        },
+        "profile_image": {
+            "type": ["null", "string"]
+        },
+        "cover_image": {
+            "type": ["null", "string"]
+        },
+        "bio": {
+            "type": ["null", "string"]
+        },
+        "website": {
+            "type": ["null", "string"],
+            "maxLength": 255
+        },
+        "location": {
+            "type": ["null", "string"],
+            "maxLength": 255
+        },
+        "facebook": {
+            "type": ["null", "string"],
+            "maxLength": 255
+        },
+        "twitter": {
+            "type": ["null", "string"],
+            "maxLength": 255
+        },
+        "meta_title": {
+            "type": ["null", "string"]
+        },
+        "meta_description": {
+            "type": ["null", "string"]
+        },
+        "url": {
+            "type": ["null", "string"],
+            "maxLength": 255
+        }
+    },
+    "required": ["id", "name", "slug", "profile_image", "cover_image", "bio", "website", "location", "facebook", "twitter", "meta_title", "meta_description", "url"]
+}

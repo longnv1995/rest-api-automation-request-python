@@ -1,0 +1,86 @@
+{
+    "title": "A user schema",
+    "description": "A user information",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string",
+            "maxLength": 256
+        },
+        "slug": {
+            "type": "string",
+            "maxLength": 256
+        },
+        "email": {
+            "type": "string"
+        },
+        "profile_image": {
+            "type": ["string", "null"]
+        },
+        "cover_image": {
+            "type": ["string", "null"]
+        },
+        "bio": {
+            "type": ["string", "null"]
+        },
+        "website": {
+            "type": ["string", "null"]
+        },
+        "location": {
+            "type": ["string", "null"]
+        },
+        "facebook": {
+            "type": ["string", "null"]
+        },
+        "twitter": {
+            "type": ["string", "null"]
+        },
+        "accessibility": {
+            "type": ["string", "null"]
+        },
+        "status": {
+            "type": "string",
+            "enum": ["active"]
+        },
+        "meta_title": {
+            "type": ["string", "null"]
+        },
+        "meta_description": {
+            "type": ["string", "null"]
+        },
+        "tour": {
+            "type": ["string", "null"]
+        },
+        "last_seen": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "comment_notifications": {
+            "type": "boolean"
+        },
+        "free_member_signup_notification": {
+            "type": "boolean"
+        },
+        "paid_subscription_started_notification": {
+            "type": "boolean"
+        },
+        "paid_subscription_canceled_notification": {
+            "type": "boolean"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "url": {
+            "type": "string"
+        }
+    },
+    "required": ["id", "name", "slug", "email", "profile_image", "cover_image", "bio", "website", "location", "facebook", "twitter", "accessibility", "status", "meta_title", "meta_description", "tour", "last_seen", "comment_notifications", "free_member_signup_notification", "paid_subscription_started_notification", "paid_subscription_canceled_notification", "created_at", "updated_at", "url"]
+}

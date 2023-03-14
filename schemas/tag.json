@@ -1,0 +1,77 @@
+{
+    "$id": "https://example.com/tag.schema.json",
+    "title": "Tag Schema",
+    "description": "A Tag",
+    "properties": {
+        "id": {
+            "type": "string",
+            "minLength": 24,
+            "maxLength": 24
+        },
+        "name": {
+            "type": "string"
+        },
+        "slug": {
+            "type": "string"
+        },
+        "description": {
+            "type": ["null", "string"]
+        },
+        "feature_image": {
+            "type": ["null", "string"]
+        },
+        "visibility": {
+            "type": "string",
+            "enum": ["internal", "public"]
+        },
+        "og_image": {
+            "type": ["null", "string"]
+        },
+        "og_title": {
+            "type": ["null", "string"]
+        },
+        "og_description": {
+            "type": ["null", "string"]
+        },
+        "twitter_image": {
+            "type": ["null", "string"]
+        },
+        "twitter_title": {
+            "type": ["null", "string"]
+        },
+        "twitter_description": {
+            "type": ["null", "string"]
+        },
+        "meta_title": {
+            "type": ["null", "string"]
+        },
+        "meta_description": {
+            "type": ["null", "string"]
+        },
+        "codeinjection_head": {
+            "type": ["null", "string"]
+        },
+        "codeinjection_foot": {
+            "type": ["null", "string"]
+        },
+        "canonical_url": {
+            "type": ["null", "string"]
+        },
+        "accent_color": {
+            "type": ["null", "string"]
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "url": {
+            "type": "string",
+            "maxLength": 255
+        }
+    },
+    "required": ["id", "name", "slug", "description", "feature_image", "visibility", "og_image", "og_title", "og_description", "twitter_image", "twitter_title", "twitter_description", "meta_title", "meta_description", "codeinjection_head", "codeinjection_foot", "canonical_url", "accent_color", "url"]
+}
