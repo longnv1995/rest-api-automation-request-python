@@ -1,0 +1,138 @@
+{
+    "title": "Post Schema",
+    "description": "A post",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "minLength": 24,
+            "maxLength": 24
+        },
+        "uuid": {
+            "type": "string",
+            "minLength": 36,
+            "maxLength": 36
+        },
+        "title": {
+            "type": "string",
+            "maxLength": 256
+        },
+        "slug": {
+            "type": "string",
+            "maxLength": 256
+        },
+        "mobiledoc": {
+            "type": ["string", "null"]
+        },
+        "html": {
+            "type": ["string", "null"]
+        },
+        "comment_id": {
+            "type": "string",
+            "minLength": 24,
+            "maxLength": 24
+        },
+        "feature_image": {
+            "type": ["string", "null"]
+        },
+        "featured": {
+            "type": "boolean"
+        },
+        "status": {
+            "type": "string",
+            "enum": ["draft", "sent", "private", "published"]
+        },
+        "visibility": {
+            "type": "string",
+            "enum": ["public"]
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "datetime"
+        },
+        "published_at": {
+            "type": ["string", "null"],
+            "format": "date-time"
+        },
+        "custom_excerpt": {
+            "type": ["string", "null"]
+        },
+        "codeinjection_head": {
+            "type": ["string", "null"]
+        },
+        "codeinjection_foot": {
+            "type": ["string", "null"]
+        },
+        "custom_template": {
+            "type": ["string", "null"]
+        },
+        "canonical_url": {
+            "type": ["string", "null"]
+        },
+        "tags": {
+            "type": "array"
+        },
+        "authors": {
+            "type": "array"
+        },
+        "tiers": {
+            "type": "array"
+        },
+        "url": {
+            "type": "string"
+        },
+        "excerpt": {
+            "type": ["string", "null"]
+        },
+        "og_image": {
+            "type": ["string", "null"]
+        },
+        "og_title": {
+            "type": ["string", "null"]
+        },
+        "og_description": {
+            "type": ["string", "null"]
+        },
+        "twitter_image": {
+            "type": ["string", "null"]
+        },
+        "twitter_title": {
+            "type": ["string", "null"]
+        },
+        "twitter_description": {
+            "type": ["string", "null"]
+        },
+        "meta_title": {
+            "type": ["string", "null"]
+        },
+        "meta_description": {
+            "type": ["string", "null"]
+        },
+        "email_subject": {
+            "type": ["string", "null"]
+        },
+        "frontmatter": {
+            "type": ["string", "null"]
+        },
+        "feature_image_alt": {
+            "type": ["string", "null"]
+        },
+        "feature_image_caption": {
+            "type": ["string", "null"]
+        },
+        "email_only": {
+            "type": "boolean"
+        },
+        "email": {
+            "type": ["string", "null"]
+        },
+        "newsletter": {
+            "type": ["string", "null"]
+        }
+    },
+    "required": ["id", "uuid", "title", "slug", "comment_id", "feature_image", "featured", "visibility", "created_at", "updated_at", "published_at", "custom_excerpt", "codeinjection_head", "codeinjection_foot", "custom_template", "canonical_url", "url", "excerpt", "og_image", "og_title", "og_description", "twitter_image", "twitter_description", "meta_title", "meta_description", "email_subject", "frontmatter", "feature_image_alt", "feature_image_caption"]
+}

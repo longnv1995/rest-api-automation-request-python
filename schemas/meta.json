@@ -1,0 +1,52 @@
+{
+    "title": "A meta schema",
+    "description": "A meta schema to verify meta object",
+    "type": "object",
+    "properties": {
+        "pagination": {
+            "type": "object",
+            "properties": {
+                "page": {
+                    "type": "number",
+                    "minimum": 1
+                },
+                "limit": {
+                    "anyOf": [
+                        {"$ref": "#/definitions/bounded_limit_as_number"},
+                        {"$ref": "#/definitions/bounded_limit_as_string"}
+                    ]
+                },
+                "pages": {
+                    "type": "number",
+                    "minimum": 1
+                },
+                "total": {
+                    "type": "number",
+                    "minimum": 1
+                },
+                "next": {
+                    "type": ["null", "number"],
+                    "minimum": 1
+                },
+                "prev": {
+                    "type": ["null", "number"],
+                    "minimum": 1
+                }
+            },
+            "required": ["page", "limit", "pages", "total", "next", "prev"],
+            "additionalProperties": false
+        }
+    },
+    "definitions": {
+        "bounded_limit_as_number": {
+            "type": "number",
+            "minimum": 1
+        },
+        "bounded_limit_as_string": {
+            "type": "string",
+            "enum": ["all"]
+        }
+    },
+    "required": ["pagination"],
+    "additionalProperties": false
+}
